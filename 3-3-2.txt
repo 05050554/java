@@ -1,0 +1,89 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class MouseEventDemo extends java.awt.Frame implements 
+  MouseListener,        
+     MouseWheelListener,
+  MouseMotionListener {  
+
+  // Main method
+  public static void main(String[] args) {
+    new MouseEventDemo();
+  }
+
+  // 建構函式
+  public MouseEventDemo() {
+    super("Window Event Demo");
+
+    
+    // 註冊 WindowListener
+    this.addMouseListener(this);    
+    // 註冊 WindowStateListener
+    this.addMouseMotionListener(this);    
+ this.addMouseWheelListener(this); 
+    // 設定視窗的大小
+    this.setSize(new Dimension(200, 200));
+
+    // Center the frame
+    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+    Dimension frameSize = this.getSize();
+
+    if (frameSize.height > screenSize.height)
+      frameSize.height = screenSize.height;
+
+    if (frameSize.width > screenSize.width)
+      frameSize.width = screenSize.width;
+
+    this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
+
+    // 顯示視窗
+    this.setVisible(true);
+  }
+  
+  // 實作WindowListener介面之方法
+	public void mouseClicked(MouseEvent e)//點滑鼠
+		{
+			System.out.println("點擊滑鼠");
+		}
+				
+	public void mouseEntered(MouseEvent e)//滑鼠進入
+		{
+			System.out.println("按下滑鼠");       
+		}
+	public void mouseExited(MouseEvent e)//滑鼠離開
+		{
+			System.out.println("離開滑鼠");  
+                
+		}
+
+	public void mousePressed(MouseEvent e)//按下滑鼠
+		{
+            System.out.println("按下滑鼠");
+		}
+	public void mouseReleased(MouseEvent e)//放開滑鼠
+		{
+		System.out.println("放開滑鼠");
+		}
+	public void mouseMoved(MouseEvent e)//放開滑鼠
+		{
+			System.out.println("移動滑鼠");
+		}		
+
+	public void mouseDragged(MouseEvent e)//放開滑鼠
+		{
+			System.out.println("點擊滑鼠移動");
+		}	
+	public void mouseWheelMoved(MouseWheelEvent e)//放開滑鼠
+		{
+			System.out.println("滾輪移動");
+		}				
+	}			
+			
+			
+			
+			
+			
+		
+     
+    
+
