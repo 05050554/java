@@ -11,17 +11,17 @@ public class MouseEventDemo extends java.awt.Frame implements
     new MouseEventDemo();
   }
 
-  // «Øºc¨ç¦¡
+
   public MouseEventDemo() {
     super("Window Event Demo");
 
     
-    // µù¥U WindowListener
+ 
     this.addMouseListener(this);    
-    // µù¥U WindowStateListener
+   
     this.addMouseMotionListener(this);    
  this.addMouseWheelListener(this); 
-    // ³]©wµøµ¡ªº¤j¤p
+  
     this.setSize(new Dimension(200, 200));
 
     // Center the frame
@@ -36,46 +36,46 @@ public class MouseEventDemo extends java.awt.Frame implements
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    
     this.setVisible(true);
   }
   
-  // ¹ê§@WindowListener¤¶­±¤§¤èªk
-	public void mouseClicked(MouseEvent e)//ÂI·Æ¹«
+  
+	public void mouseClicked(MouseEvent e)
 		{
-			System.out.println("ÂIÀ»·Æ¹«");
+			System.out.println("é»žæ“Šæ»‘é¼ ");
 		}
 				
-	public void mouseEntered(MouseEvent e)//·Æ¹«¶i¤J
+	public void mouseEntered(MouseEvent e)
 		{
-			System.out.println("«ö¤U·Æ¹«");       
+			System.out.println("æŒ‰ä¸‹æ»‘é¼ ");       
 		}
-	public void mouseExited(MouseEvent e)//·Æ¹«Â÷¶}
+	public void mouseExited(MouseEvent e)
 		{
-			System.out.println("Â÷¶}·Æ¹«");  
+			System.out.println("é›¢é–‹æ»‘é¼ ");  
                 
 		}
 
-	public void mousePressed(MouseEvent e)//«ö¤U·Æ¹«
+	public void mousePressed(MouseEvent e)
 		{
-            System.out.println("«ö¤U·Æ¹«");
+            System.out.println("æŒ‰ä¸‹æ»‘é¼ ");
 		}
-	public void mouseReleased(MouseEvent e)//©ñ¶}·Æ¹«
+	public void mouseReleased(MouseEvent e)
 		{
-		System.out.println("©ñ¶}·Æ¹«");
+		System.out.println("æ”¾é–‹æ»‘é¼ ");
 		}
-	public void mouseMoved(MouseEvent e)//©ñ¶}·Æ¹«
+	public void mouseMoved(MouseEvent e)
 		{
-			System.out.println("²¾°Ê·Æ¹«");
+			System.out.println("ç§»å‹•æ»‘é¼ ");
 		}		
 
-	public void mouseDragged(MouseEvent e)//©ñ¶}·Æ¹«
+	public void mouseDragged(MouseEvent e)
 		{
-			System.out.println("ÂIÀ»·Æ¹«²¾°Ê");
+			System.out.println("é»žæ“Šæ»‘é¼ ç§»å‹•");
 		}	
-	public void mouseWheelMoved(MouseWheelEvent e)//©ñ¶}·Æ¹«
+	public void mouseWheelMoved(MouseWheelEvent e)
 		{
-			System.out.println("ºu½ü²¾°Ê");
+			System.out.println("æ»¾è¼ª");
 		}				
 	}			
 			
