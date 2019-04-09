@@ -8,60 +8,60 @@ public class WindowEventDemo2 extends java.awt.Frame {
     new WindowEventDemo2();
   }
 
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public WindowEventDemo2() {
     super("Window Event Demo");
 
-    // ¥HInner Classªº¤è¦¡¨Ï¥ÎWindowAdapter
+    // ä»¥Inner Classçš„æ–¹å¼ä½¿ç”¨WindowAdapter
     this.addWindowListener(new WindowAdapter() {
       public void windowActivated(WindowEvent e) {
-        System.out.println("µøµ¡ª¬ºA¥Ñ«D§@¥Î¤¤ÅÜ¬°§@¥Î¤¤");
+        System.out.println("è¦–çª—ç‹€æ…‹ç”±éä½œç”¨ä¸­è®Šç‚ºä½œç”¨ä¸­");
       }
       
       public void windowClosed(WindowEvent e) {
-        System.out.println("µøµ¡¤wÃö³¬");
+        System.out.println("è¦–çª—å·²é—œé–‰");
       }
       
       public void windowClosing(WindowEvent e) {
-        System.out.println("µøµ¡¥¿¦bÃö³¬");
+        System.out.println("è¦–çª—æ­£åœ¨é—œé–‰");
         dispose();
         System.exit(0);
       }
       
       public void windowDeactivated(WindowEvent e) {
-        System.out.println("µøµ¡ª¬ºA¥Ñ§@¥Î¤¤ÅÜ¬°«D§@¥Î¤¤");
+        System.out.println("è¦–çª—ç‹€æ…‹ç”±ä½œç”¨ä¸­è®Šç‚ºéä½œç”¨ä¸­");
       }
       
       public void windowDeiconified(WindowEvent e) {
-        System.out.println("µøµ¡ª¬ºA¥Ñ³Ì¤p¤ÆÅÜ¬°¥¿±`ª¬ºA");
+        System.out.println("è¦–çª—ç‹€æ…‹ç”±æœ€å°åŒ–è®Šç‚ºæ­£å¸¸ç‹€æ…‹");
       }
       
       public void windowIconified(WindowEvent e) {
-        System.out.println("µøµ¡ª¬ºA¥Ñ¥¿±`ª¬ºAÅÜ¬°³Ì¤p¤Æ");
+        System.out.println("è¦–çª—ç‹€æ…‹ç”±æ­£å¸¸ç‹€æ…‹è®Šç‚ºæœ€å°åŒ–");
       }
       
       public void windowOpened(WindowEvent e) {
-        System.out.println("µøµ¡¶}±Ò");
+        System.out.println("è¦–çª—é–‹å•Ÿ");
       }    
     });    
 
     this.addWindowFocusListener(new WindowAdapter() {
       public void windowGainedFocus(WindowEvent e) {
-        System.out.println("µøµ¡¨ú±o¿é¤JµJÂI");
+        System.out.println("è¦–çª—å–å¾—è¼¸å…¥ç„¦é»");
       }
     
       public void windowLostFocus(WindowEvent e) {
-        System.out.println("µøµ¡¥¢¥h¿é¤JµJÂI");
+        System.out.println("è¦–çª—å¤±å»è¼¸å…¥ç„¦é»");
       }
     });    
         
     this.addWindowStateListener(new WindowAdapter() {
       public void windowStateChanged(WindowEvent e) {
-        System.out.println("µøµ¡ª¬ºA§ïÅÜ");
+        System.out.println("è¦–çª—ç‹€æ…‹æ”¹è®Š");
       }
     });    
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(200, 200);
 
     // Center the frame
@@ -76,7 +76,7 @@ public class WindowEventDemo2 extends java.awt.Frame {
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
   }
 }
