@@ -86,3 +86,6 @@ public class WindowEventDemo extends java.awt.Frame implements
     System.out.println("視窗狀態改變");
   }
 }
+
+
+
