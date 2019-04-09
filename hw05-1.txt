@@ -7,33 +7,33 @@ public class CheckboxDemo extends java.awt.Frame implements ItemListener {
     new CheckboxDemo();
   }
   
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public CheckboxDemo() {
     super("Checkbox Demo");
 
-    final int row = 2;    // ¦C
-    final int column = 1; // ¦æ
+    final int row = 2;    // åˆ—
+    final int column = 1; // è¡Œ
 
-    // ©w¸q Layout Manager ¬° GridLayout
+    // å®šç¾© Layout Manager ç‚º GridLayout
     setLayout(new GridLayout(row, column));
 
     java.awt.Panel panel1 = new Panel();
 
-    // «Øºc¨ç¦¡ 1
+    // å»ºæ§‹å‡½å¼ 1
     checkbox[0] = new Checkbox();
-    // ³]©wCheckboxÃş§O¤§¤å¦r¼ĞÅÒ
+    // è¨­å®šCheckboxé¡åˆ¥ä¹‹æ–‡å­—æ¨™ç±¤
     checkbox[0].setLabel("Checkbox 0");
-    // ³]©wCheckboxÃş§Oªº¿ï¨úª¬ºA
+    // è¨­å®šCheckboxé¡åˆ¥çš„é¸å–ç‹€æ…‹
     checkbox[0].setState(true);
     panel1.add(checkbox[0]);
 
-    // «Øºc¨ç¦¡ 2
+    // å»ºæ§‹å‡½å¼ 2
     checkbox[1] = new Checkbox("Checkbox 1");
-    // ³]©wCheckboxÃş§Oªº¿ï¨úª¬ºA
+    // è¨­å®šCheckboxé¡åˆ¥çš„é¸å–ç‹€æ…‹
     checkbox[1].setState(false);
     panel1.add(checkbox[1]);
 
-    // «Øºc¨ç¦¡ 3
+    // å»ºæ§‹å‡½å¼ 3
     checkbox[2] = new Checkbox("Checkbox 2", true);
     panel1.add(checkbox[2]);
 
@@ -41,47 +41,47 @@ public class CheckboxDemo extends java.awt.Frame implements ItemListener {
 
     java.awt.Panel panel2 = new Panel();
 
-    // «Øºc¸s²Õ
+    // å»ºæ§‹ç¾¤çµ„
     java.awt.CheckboxGroup group = new CheckboxGroup() ;
 
-    // «Øºc¨ç¦¡ 1
+    // å»ºæ§‹å‡½å¼ 1
     checkbox[3] = new Checkbox();
-    // ³]©wCheckboxÃş§O¤§¤å¦r¼ĞÅÒ
+    // è¨­å®šCheckboxé¡åˆ¥ä¹‹æ–‡å­—æ¨™ç±¤
     checkbox[3].setLabel("Checkbox 3");
-	// µù¥U ItemListener
+	// è¨»å†Š ItemListener
       checkbox[3].addItemListener(this);
-    // ³]©wCheckboxÃş§Oªº¸s²Õ
+    // è¨­å®šCheckboxé¡åˆ¥çš„ç¾¤çµ„
     checkbox[3].setCheckboxGroup(group);
     panel2.add(checkbox[3]);
 
     
 
-    // «Øºc¨ç¦¡ 4
-    // ³]©wCheckboxÃş§Oªº¿ï¨úª¬ºA
+    // å»ºæ§‹å‡½å¼ 4
+    // è¨­å®šCheckboxé¡åˆ¥çš„é¸å–ç‹€æ…‹
     checkbox[4] = new Checkbox("Checkbox 4", group, false);
-	 // µù¥U ItemListener
+	 // è¨»å†Š ItemListener
       checkbox[4].addItemListener(this);
-    // ³]©w¬O§_¦^À³¤¬°Ê
+    // è¨­å®šæ˜¯å¦å›æ‡‰äº’å‹•
     checkbox[4].setEnabled(false);
-    // ³]©wCheckboxÃş§Oªº¸s²Õ
+    // è¨­å®šCheckboxé¡åˆ¥çš„ç¾¤çµ„
     checkbox[4].setCheckboxGroup(group);
     panel2.add(checkbox[4]);
 	
-	// «Øºc¨ç¦¡ 5
+	// å»ºæ§‹å‡½å¼ 5
     checkbox[5] = new Checkbox("Checkbox 5", false, group);
-	// µù¥U ItemListener
+	// è¨»å†Š ItemListener
       checkbox[5].addItemListener(this);
-    // ³]©wCheckboxÃş§Oªº¸s²Õ
+    // è¨­å®šCheckboxé¡åˆ¥çš„ç¾¤çµ„
     checkbox[5].setCheckboxGroup(group);
     panel2.add(checkbox[5]);
 
     add(panel2);
 
-    // ¥HCheckboxGroupªºsetSelectedCheckbox¤èªk
-    // ³]©wCheckbox¸s²Õ¤¤³Q¿ï¨úªº¶µ¥Ø¡]Item¡^
+    // ä»¥CheckboxGroupçš„setSelectedCheckboxæ–¹æ³•
+    // è¨­å®šCheckboxç¾¤çµ„ä¸­è¢«é¸å–çš„é …ç›®ï¼ˆItemï¼‰
     group.setSelectedCheckbox(checkbox[3]);
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(400, 100);
 
     // Center the frame
@@ -96,7 +96,7 @@ public class CheckboxDemo extends java.awt.Frame implements ItemListener {
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
 
     this.addWindowListener(new WindowAdapter() {
@@ -109,7 +109,7 @@ public class CheckboxDemo extends java.awt.Frame implements ItemListener {
  public void itemStateChanged(ItemEvent e) {
     String source = null;
 
-    // ¨ú±o²£¥Í¶µ¥Ø¨Æ¥óªºª«¥ó
+    // å–å¾—ç”¢ç”Ÿé …ç›®äº‹ä»¶çš„ç‰©ä»¶
     Checkbox cb = (Checkbox)(e.getItemSelectable());
     
     for (int i=0; i < checkbox.length; i++) {
