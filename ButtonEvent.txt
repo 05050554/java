@@ -32,7 +32,7 @@ public class ButtonEvent extends java.awt.Frame implements ActionListener{
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
 
     this.addWindowListener(new WindowAdapter() {
@@ -46,27 +46,27 @@ public class ButtonEvent extends java.awt.Frame implements ActionListener{
 	   String source = e.getActionCommand();
 	   switch(source){
 		   case "New":
-		     System.out.println("¶}°_·sÀÉ");
+		     System.out.println("é–‹èµ·æ–°æª”");
 			 break;
 			 
 			 case "Open":
-		     System.out.println("¶}°_ÂÂÀÉ");
+		     System.out.println("é–‹èµ·èˆŠæª”");
 			 break;
 			 
 			 case "Save":
-		     System.out.println("Àx¦sÀÉ®×");
+		     System.out.println("å„²å­˜æª”æ¡ˆ");
 			 break;
 			 
 			 case "Cut":
-		     System.out.println("°Å¨ú");
+		     System.out.println("å‰ªå–");
 			 break;
 			 
 			 case "Copy":
-		     System.out.println("½Æ»s");
+		     System.out.println("è¤‡è£½");
 			 break;
 			 
 			 case "Paste":
-		     System.out.println("¶K¤W");
+		     System.out.println("è²¼ä¸Š");
 			 break;
    }
   }
