@@ -9,42 +9,42 @@ public class exlabel extends java.awt.Frame
     new exlabel();
   }
   
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public exlabel() {
     super("Label Demo");
 
-    final int row = 2;    // ¦C
-    final int column = 3; // ¦æ
+    final int row = 2;    // åˆ—
+    final int column = 3; // è¡Œ
 
 	
-    // ©w¸q Layout Manager ¬° GridLayout
+    // å®šç¾© Layout Manager ç‚º GridLayout
     setLayout(new GridLayout(row, column));
 
     java.awt.Label label;
     
-    // «Øºc¨ç¦¡ 1
+    // å»ºæ§‹å‡½å¼ 1
     label = new Label();
-    // ³]©wLabelÃş§O¤§Åã¥Ü¤å¦r
-    label.setText("¦V¥ª¹ï»ô");
-    // ³]©wLabelÃş§O¤§¹ï»ô¤è¦¡¡A¦V¥ª¹ï»ô
+    // è¨­å®šLabelé¡åˆ¥ä¹‹é¡¯ç¤ºæ–‡å­—
+    label.setText("å‘å·¦å°é½Š");
+    // è¨­å®šLabelé¡åˆ¥ä¹‹å°é½Šæ–¹å¼ï¼Œå‘å·¦å°é½Š
     label.setAlignment(Label.LEFT);
     add(label);
 
-    // «Øºc¨ç¦¡ 2
-    label = new Label("¦V¤¤¥¡¹ï»ô",Label.CENTER);
+    // å»ºæ§‹å‡½å¼ 2
+    label = new Label("å‘ä¸­å¤®å°é½Š",Label.CENTER);
 	label.addMouseMotionListener(new MouseMotionListener(){
 	
 	public void mouseMoved(MouseEvent e)
 		{
-			System.out.println("²¾°Ê·Æ¹«");
+			System.out.println("ç§»å‹•æ»‘é¼ ");
 		}		
 
 	public void mouseDragged(MouseEvent e)
 		{
-			System.out.println("ÂIÀ»·Æ¹«²¾°Ê");
+			System.out.println("é»æ“Šæ»‘é¼ ç§»å‹•");
 		}	
 					
-    // ³]©wLabelÃş§O¤§¹ï»ô¤è¦¡¡A¦V¤¤¥¡¹ï»ô
+    // è¨­å®šLabelé¡åˆ¥ä¹‹å°é½Šæ–¹å¼ï¼Œå‘ä¸­å¤®å°é½Š
     
   });
   
@@ -52,31 +52,31 @@ public class exlabel extends java.awt.Frame
   label.addMouseListener(new MouseListener(){
 	 public void mouseClicked(MouseEvent e)
 		{
-			System.out.println("ÂIÀ»·Æ¹«");
+			System.out.println("é»æ“Šæ»‘é¼ ");
 		}
 				
 	public void mouseEntered(MouseEvent e)
 		{
-			System.out.println("«ö¤U·Æ¹«");       
+			System.out.println("æŒ‰ä¸‹æ»‘é¼ ");       
 		}
 	public void mouseExited(MouseEvent e)
 		{
-			System.out.println("Â÷¶}·Æ¹«");  
+			System.out.println("é›¢é–‹æ»‘é¼ ");  
                 
 		}
 
 	public void mousePressed(MouseEvent e)
 		{
-            System.out.println("«ö¤U·Æ¹«");
+            System.out.println("æŒ‰ä¸‹æ»‘é¼ ");
 		}
 	public void mouseReleased(MouseEvent e)
 		{
-		System.out.println("©ñ¶}·Æ¹«");
+		System.out.println("æ”¾é–‹æ»‘é¼ ");
 		}
 	
 	
 					
-    // ³]©wLabelÃş§O¤§¹ï»ô¤è¦¡¡A¦V¤¤¥¡¹ï»ô
+    // è¨­å®šLabelé¡åˆ¥ä¹‹å°é½Šæ–¹å¼ï¼Œå‘ä¸­å¤®å°é½Š
     
   });
   
@@ -84,42 +84,42 @@ public class exlabel extends java.awt.Frame
 		
 	public void mouseWheelMoved(MouseWheelEvent e)
 		{
-			System.out.println("ºu½ü");
+			System.out.println("æ»¾è¼ª");
 		}				
-    // ³]©wLabelÃş§O¤§¹ï»ô¤è¦¡¡A¦V¤¤¥¡¹ï»ô
+    // è¨­å®šLabelé¡åˆ¥ä¹‹å°é½Šæ–¹å¼ï¼Œå‘ä¸­å¤®å°é½Š
     
   });
     add(label);
 	
 
-    // «Øºc¨ç¦¡ 3
-    // ³]©wLabelÃş§O¤§¹ï»ô¤è¦¡¡A¦V¥k¹ï»ô
-    label = new Label("¦V¥k¹ï»ô", Label.RIGHT);
+    // å»ºæ§‹å‡½å¼ 3
+    // è¨­å®šLabelé¡åˆ¥ä¹‹å°é½Šæ–¹å¼ï¼Œå‘å³å°é½Š
+    label = new Label("å‘å³å°é½Š", Label.RIGHT);
     add(label);
 
     //
-    // ¨Ï¥ÎComponent©â¶HÃş§O©Ò´£¨Ñªº¤èªk
+    // ä½¿ç”¨ComponentæŠ½è±¡é¡åˆ¥æ‰€æä¾›çš„æ–¹æ³•
     //
-    // ³]©w¦r«¬ - ²Ê±×Åé¦r«¬
+    // è¨­å®šå­—å‹ - ç²—æ–œé«”å­—å‹
     label = new Label("Font Demo", Label.LEFT);
     label.setFont(new Font("dialog", Font.BOLD | Font.ITALIC, 10));
     add(label);
 
-    // ³]©wÃC¦â
+    // è¨­å®šé¡è‰²
     label = new Label("Color Demo", Label.CENTER);
-    // ³]©w­I´ºÃC¦â
+    // è¨­å®šèƒŒæ™¯é¡è‰²
     label.setBackground(new Color(120,50,0));
-    // ³]©w«e´ºÃC¦â
+    // è¨­å®šå‰æ™¯é¡è‰²
     label.setForeground(new Color(245,185,60));
     add(label);
 
-    // ³]©w·Æ¹««ü¼Ğ
+    // è¨­å®šæ»‘é¼ æŒ‡æ¨™
     label = new Label("Cursor Demo", Label.RIGHT);
-    // ¿ï¾Ü³s½u¡]¤â§Î¡^¤§·Æ¹««ü¼Ğ
+    // é¸æ“‡é€£ç·šï¼ˆæ‰‹å½¢ï¼‰ä¹‹æ»‘é¼ æŒ‡æ¨™
     label.setCursor(new Cursor(Cursor.HAND_CURSOR));
     add(label);
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(250, 200);
 
     // Center the frame
@@ -134,7 +134,7 @@ public class exlabel extends java.awt.Frame
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
     
     this.addWindowListener(new WindowAdapter() {
