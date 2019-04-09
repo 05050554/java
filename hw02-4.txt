@@ -7,7 +7,7 @@ public class GridBagLayoutDemo extends java.awt.Frame {
     new GridBagLayoutDemo();
   }
   
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public GridBagLayoutDemo() {
     super("Grid Bag Layout Demo");
 
@@ -15,19 +15,19 @@ public class GridBagLayoutDemo extends java.awt.Frame {
     GridBagLayout gridbaglayout = new GridBagLayout();
     GridBagConstraints gbConstraints = new GridBagConstraints();
     
-    // ©w¸q Layout Manager ¬° GridBagLayout
+    // å®šç¾© Layout Manager ç‚º GridBagLayout
     setLayout(gridbaglayout);
     
-    // ¦P®É§ïÅÜª«¥ó¼e«×»P°ª«×¥H¶ñº¡Åã¥Ü°Ï°ì¤§¤ô¥­»P««ª½¤è¦V
+    // åŒæ™‚æ”¹è®Šç‰©ä»¶å¯¬åº¦èˆ‡é«˜åº¦ä»¥å¡«æ»¿é¡¯ç¤ºå€åŸŸä¹‹æ°´å¹³èˆ‡å‚ç›´æ–¹å‘
     gbConstraints.fill = GridBagConstraints.BOTH;
     
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡¤ô¥­¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“æ°´å¹³æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
     gbConstraints.weightx = 0.5;
     
 
 
     button = new Button("1");
-    // ³]©wGrid Bag Layout¤¤ª«¥óªº­­¨î
+    // è¨­å®šGrid Bag Layoutä¸­ç‰©ä»¶çš„é™åˆ¶
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
     
@@ -35,25 +35,25 @@ public class GridBagLayoutDemo extends java.awt.Frame {
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
     
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
-    // ª«¥ó±N¶ñº¡©Ò³Ñ¾lªº°Ï°ì¦C¼Æ©Î¦æ¼Æ
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
+    // ç‰©ä»¶å°‡å¡«æ»¿æ‰€å‰©é¤˜çš„å€åŸŸåˆ—æ•¸æˆ–è¡Œæ•¸
    button = new Button("3");
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
     
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡¤ô¥­¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“æ°´å¹³æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
     button = new Button("4");
     gridbaglayout.setConstraints(button, gbConstraints);
 	gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
     add(button);
     
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
-    // ª«¥ó±N¶ñº¡°£¤F©Ò¦b¦Cªº³Ì«á¤@­Ó³æ¦ì°Ï°ì¥H¥~¤§°Ï°ì¦C¼Æ
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
+    // ç‰©ä»¶å°‡å¡«æ»¿é™¤äº†æ‰€åœ¨åˆ—çš„æœ€å¾Œä¸€å€‹å–®ä½å€åŸŸä»¥å¤–ä¹‹å€åŸŸåˆ—æ•¸
     button = new Button("5");
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
-    // ª«¥ó±N¶ñº¡©Ò³Ñ¾lªº°Ï°ì¦C¼Æ©Î¦æ¼Æ
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
+    // ç‰©ä»¶å°‡å¡«æ»¿æ‰€å‰©é¤˜çš„å€åŸŸåˆ—æ•¸æˆ–è¡Œæ•¸
 	
 	gbConstraints.fill = GridBagConstraints.BOTH;
   
@@ -63,11 +63,11 @@ public class GridBagLayoutDemo extends java.awt.Frame {
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
      gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
     //gbConstraints.gridwidth = 1;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
    // gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
     //gbConstraints.weighty = 1.0;
     button = new Button("7");
     gridbaglayout.setConstraints(button, gbConstraints);
@@ -81,43 +81,43 @@ public class GridBagLayoutDemo extends java.awt.Frame {
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
      gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
     //gbConstraints.gridwidth = 1;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
    // gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
     //gbConstraints.weighty = 1.0;
     button = new Button("9");
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
    
    
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
 	
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦Cªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸåˆ—çš„æ•¸ç›®
     gbConstraints.gridwidth = 2;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
     gbConstraints.gridheight = 7;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
     gbConstraints.weighty = 1.0;      
     button = new Button("10");
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
 	gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
     gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
 	gbConstraints.weighty = 1.0;   
 	gbConstraints.fill = GridBagConstraints.HORIZONTAL;
     button = new Button("11");
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
 	   
 gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
-    // ³]©wª«¥ó°t¸m®É©Ò¦û¾Ú°Ï°ì¦æªº¼Æ¥Ø
+    // è¨­å®šç‰©ä»¶é…ç½®æ™‚æ‰€ä½”æ“šå€åŸŸè¡Œçš„æ•¸ç›®
     gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
 	gbConstraints.weighty = 1.0;   
 	gbConstraints.fill = GridBagConstraints.HORIZONTAL;
 	button = new Button("12");
@@ -127,7 +127,7 @@ gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
 	
 	
 	gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
 	gbConstraints.weighty = 1.0;   
 	gbConstraints.fill = GridBagConstraints.HORIZONTAL;
 	button = new Button("13");
@@ -137,7 +137,7 @@ gbConstraints.gridwidth = GridBagConstraints.REMAINDER;
 	gbConstraints.gridx = 3;
 	gbConstraints.gridy = 6;
 	gbConstraints.gridwidth = 2;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì  
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ  
 	//gbConstraints.gridwidth = 2;
 	///gbConstraints.fill = GridBagConstraints.RELATIVE;
 	button = new Button("14");
@@ -164,7 +164,7 @@ gbConstraints.gridx = 2;
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
 	/*gbConstraints.gridheight = 1;
-    // ¨Ì¥[Åv¤ñ¨Ò¤À°tª«¥ó¶¡««ª½¤è¦VÃB¥~¤§°Ï°ì
+    // ä¾åŠ æ¬Šæ¯”ä¾‹åˆ†é…ç‰©ä»¶é–“å‚ç›´æ–¹å‘é¡å¤–ä¹‹å€åŸŸ
 	gbConstraints.weighty = 1.0;   
 	gbConstraints.fill = GridBagConstraints.HORIZONTAL;
 	button = new Button("15");
@@ -192,7 +192,7 @@ gbConstraints.gridx = 2;
     gridbaglayout.setConstraints(button, gbConstraints);
     add(button);
 */
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(300, 300);
 
     // Center the frame
@@ -207,7 +207,7 @@ gbConstraints.gridx = 2;
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
     
     this.addWindowListener(new WindowAdapter() {
