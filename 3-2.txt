@@ -1,7 +1,7 @@
 import java.awt.*;
 import java.awt.event.*;
 
-// ¹ê§@KeyListener¤¶­±
+// å¯¦ä½œKeyListenerä»‹é¢
 public class KeyEventDemo extends java.awt.Frame implements KeyListener {
   
   // Main method
@@ -9,14 +9,14 @@ public class KeyEventDemo extends java.awt.Frame implements KeyListener {
     new KeyEventDemo();
   }
 
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public KeyEventDemo() {
     super("Key Event Demo");
 
-    // µù¥U KeyListener
+    // è¨»å†Š KeyListener
     this.addKeyListener(this);    
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(200, 200);
 
     // Center the frame
@@ -31,7 +31,7 @@ public class KeyEventDemo extends java.awt.Frame implements KeyListener {
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
 
     this.addWindowListener(new WindowAdapter() {
@@ -45,19 +45,19 @@ public class KeyEventDemo extends java.awt.Frame implements KeyListener {
     int dx = 0;
     int dy = 0;
 
-    // §PÂ_¬O§_«ö¤UAltÁä
+    // åˆ¤æ–·æ˜¯å¦æŒ‰ä¸‹Altéµ
     if (e.isAltDown()) 
       System.out.println("Press Alt key") ;
     
-    // §PÂ_¬O§_«ö¤UCtrlÁä
+    // åˆ¤æ–·æ˜¯å¦æŒ‰ä¸‹Ctrléµ
     if (e.isControlDown()) 
       System.out.println("Press Control key") ;
     
-    // §PÂ_¬O§_«ö¤UShiftÁä
+    // åˆ¤æ–·æ˜¯å¦æŒ‰ä¸‹Shiftéµ
     if (e.isShiftDown()) 
       System.out.println("Press Shift key") ;
     
-    // ¦^¶Ç«öÁä©Ò¥Nªíªº«öÁä­È
+    // å›å‚³æŒ‰éµæ‰€ä»£è¡¨çš„æŒ‰éµå€¼
     int i = e.getKeyCode() ;
 
     System.out.println("Key Pressed: " + i);
