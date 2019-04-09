@@ -8,32 +8,32 @@ java.awt.Choice choice;
     new ListDemo();
   }
   
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public ListDemo() {
     super("List Demo");
 
-    final int row = 1;    // ¦C
-    final int column = 2; // ¦æ
+    final int row = 1;    // åˆ—
+    final int column = 2; // è¡Œ
 
-    // ©w¸q Layout Manager ¬° GridLayout
+    // å®šç¾© Layout Manager ç‚º GridLayout
     setLayout(new GridLayout(row, column));
 
-    // «Øºc¨ç¦¡ 1
-    // ¹w³]Åã¥Ü¶µ¥Ø¦C¼Æ¬°4
-    // ¥B¤£¤¹³\¦h­«¿ï¾Ü¶µ¥Ø
+    // å»ºæ§‹å‡½å¼ 1
+    // é è¨­é¡¯ç¤ºé …ç›®åˆ—æ•¸ç‚º4
+    // ä¸”ä¸å…è¨±å¤šé‡é¸æ“‡é …ç›®
     java.awt.List list = new List();
     
-    // ³]©wList¿ï¨ú¶µ¥Ø
+    // è¨­å®šListé¸å–é …ç›®
     for (int i=0; i < 5; i++)
 	{		
       list.add("List " + i);
 	  
 	}     
 	list.addItemListener(this);
-    // ³]©w¬O§_¤¹³\¶µ¥Ø³Q¦h­«¿ï¾Ü  
+    // è¨­å®šæ˜¯å¦å…è¨±é …ç›®è¢«å¤šé‡é¸æ“‡  
     list.setMultipleMode(false);
 
-    // ¿ï¨ú¿ï¶µ¶µ¥Ø
+    // é¸å–é¸é …é …ç›®
     list.select(3);
 
     java.awt.Panel panel1 = new Panel();
@@ -42,21 +42,21 @@ java.awt.Choice choice;
 
 
 
-    // «Øºc¨ç¦¡ 2
-    // ¥iÅã¥Üªº¶µ¥Ø¦C¼Æ¬°5
+    // å»ºæ§‹å‡½å¼ 2
+    // å¯é¡¯ç¤ºçš„é …ç›®åˆ—æ•¸ç‚º5
     list = new List(6);
     
-    // ³]©wList¿ï¨ú¶µ¥Ø¡]Item¡^
+    // è¨­å®šListé¸å–é …ç›®ï¼ˆItemï¼‰
     for (int i=0; i < 10; i++)
 	{		
       list.add("List " + i);
 	 
 	}     
 	 list.addItemListener(this);
-    // ³]©w¬O§_¤¹³\¶µ¥Ø³Q¦h­«¿ï¾Ü  
+    // è¨­å®šæ˜¯å¦å…è¨±é …ç›®è¢«å¤šé‡é¸æ“‡  
     list.setMultipleMode(true);
 
-    // ¿ï¨ú¿ï¶µ¶µ¥Ø
+    // é¸å–é¸é …é …ç›®
 	list.select(2);
     list.select(4);
     list.select(6);
@@ -67,16 +67,16 @@ java.awt.Choice choice;
 
 
 
-    /*// «Øºc¨ç¦¡ 3
-    // ¥iÅã¥Üªº¶µ¥Ø¦C¼Æ¬°6
-    // ³]©w¤¹³\¶µ¥Ø³Q¦h­«¿ï¾Ü  
+    /*// å»ºæ§‹å‡½å¼ 3
+    // å¯é¡¯ç¤ºçš„é …ç›®åˆ—æ•¸ç‚º6
+    // è¨­å®šå…è¨±é …ç›®è¢«å¤šé‡é¸æ“‡  
     list = new List(6, true);
     
-    // ³]©wList¿ï¨ú¶µ¥Ø¡]Item¡^
+    // è¨­å®šListé¸å–é …ç›®ï¼ˆItemï¼‰
     for (int i=0; i < 10; i++)    
       list.add("List " + i);
       
-    // ¿ï¨ú¿ï¶µ¶µ¥Ø
+    // é¸å–é¸é …é …ç›®
     list.select(2);
     list.select(3);*/
 
@@ -84,7 +84,7 @@ java.awt.Choice choice;
     panel3.add(list);
     add(panel3);*/
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(420, 150);
 
     // Center the frame
@@ -99,7 +99,7 @@ java.awt.Choice choice;
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
 
     this.addWindowListener(new WindowAdapter() {
@@ -110,7 +110,7 @@ java.awt.Choice choice;
   }
   public void itemStateChanged(ItemEvent e) {
 	  String source = null;
-    // ¨ú±o²£¥Í¶µ¥Ø¨Æ¥óªºª«¥ó
+    // å–å¾—ç”¢ç”Ÿé …ç›®äº‹ä»¶çš„ç‰©ä»¶
     List ans = (List)(e.getItemSelectable());
 	if(ans.isMultipleMode()==true){
 		source="Total Item"+ans.getItemCount() +" , Select Item:";
