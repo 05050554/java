@@ -7,52 +7,52 @@ public class ButtonDemo extends java.awt.Frame {
     new ButtonDemo();
   }
   
-  // «Øºc¨ç¦¡
+  // å»ºæ§‹å‡½å¼
   public ButtonDemo() {
     super("Button Demo");
 
-    final int row = 2;    // ¦C
-    final int column = 2; // ¦æ
+    final int row = 2;    // åˆ—
+    final int column = 2; // è¡Œ
 
-    // ©w¸q Layout Manager ¬° GridLayout
+    // å®šç¾© Layout Manager ç‚º GridLayout
     setLayout(new GridLayout(row, column));
 
     java.awt.Button button;
     
-    // «Øºc¨ç¦¡ 1
+    // å»ºæ§‹å‡½å¼ 1
     //button = new Button();
-    // ³]©wButtonÃş§O¤§¤å¦r¼ĞÅÒ
+    // è¨­å®šButtoné¡åˆ¥ä¹‹æ–‡å­—æ¨™ç±¤
     //button.setLabel("OK");
     //add(button);
 
-    // «Øºc¨ç¦¡ 2
+    // å»ºæ§‹å‡½å¼ 2
     //button = new Button("Cancel");
     //add(button);
 
-    // ³]©w¦r«¬ - ²Ê±×Åé¦r«¬
+    // è¨­å®šå­—å‹ - ç²—æ–œé«”å­—å‹
     button = new Button("Font Demo");
     button.setFont(new Font("dialog", Font.BOLD | Font.ITALIC, 10));
     add(button);
 
-    // ³]©wÃC¦â
+    // è¨­å®šé¡è‰²
     button = new Button("Color Demo");
-    // ³]©w­I´ºÃC¦â
+    // è¨­å®šèƒŒæ™¯é¡è‰²
     button.setBackground(new Color(120,50,0));
-    // ³]©w«e´ºÃC¦â
+    // è¨­å®šå‰æ™¯é¡è‰²
     button.setForeground(new Color(245,185,60));
     add(button);
 
-    // ³]©w¬O§_¦^À³¤¬°Ê
+    // è¨­å®šæ˜¯å¦å›æ‡‰äº’å‹•
    // button = new Button("Disable");
     //button.setEnabled(false);
     //add(button);
 
-    // ³]©wÁôÂÃ«ü¥O¶s
+    // è¨­å®šéš±è—æŒ‡ä»¤éˆ•
     //button = new Button("Invisible");
     //button.setVisible(false);
     //add(button);
 
-    // ³]©wµøµ¡ªº¤j¤p
+    // è¨­å®šè¦–çª—çš„å¤§å°
     this.setSize(200, 200);
 
     // Center the frame
@@ -67,7 +67,7 @@ public class ButtonDemo extends java.awt.Frame {
 
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
+    // é¡¯ç¤ºè¦–çª—
     this.setVisible(true);
 
     this.addWindowListener(new WindowAdapter() {
