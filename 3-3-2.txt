@@ -78,12 +78,3 @@ public class MouseEventDemo extends java.awt.Frame implements
 			System.out.println("滾輪");
 		}				
 	}			
-			
-			
-			
-			
-			
-		
-     
-    
-
