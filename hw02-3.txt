@@ -50,3 +50,4 @@ class AdapterDemo extends WindowAdapter {
         System.exit(0);
     }
 }
+
