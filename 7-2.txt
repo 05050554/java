@@ -1,0 +1,121 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class hw
+  extends Frame
+  implements AdjustmentListener
+{
+  Scrollbar[] scrollbar = new Scrollbar[3];
+  Panel colorPanel = new Panel();
+  Label label = new Label();
+  Panel Rpanel = new Panel();
+  Panel Gpanel = new Panel();
+  Panel Bpanel = new Panel();
+  int red = 255;
+  int green = 255;
+  int blue = 255;
+  
+  public static void main(String[] paramArrayOfString)
+  {
+    new hw();
+  }
+  
+  public hw()
+  {
+    super("Scrollbar Event Demo");
+    
+    setLayout(new BorderLayout());
+    
+    Panel localPanel = new Panel();
+    localPanel.setLayout(new GridLayout(3, 1));
+    for (int i = 0; i < 3; i++)
+    {
+      this.scrollbar[i] = new Scrollbar(Scrollbar.HORIZONTAL, 0, 0, 0, 256);
+      
+      this.scrollbar[i].addAdjustmentListener(this);
+      
+      localPanel.add(this.scrollbar[i]);
+    }
+    this.colorPanel.setLayout(new GridLayout(3, 1));
+    
+    this.Rpanel.setBackground(new Color(255, 0, 0));
+    this.Gpanel.setBackground(new Color(0, 255, 0));
+    this.Bpanel.setBackground(new Color(0, 0, 255));
+    
+    this.colorPanel.add(this.Rpanel);
+    this.colorPanel.add(this.Gpanel);
+    this.colorPanel.add(this.Bpanel);
+    
+    this.label.setText("Red: " + this.red + ", Green: " + this.green + ", Blue: " + this.blue);
+    
+    add(localPanel, "North");
+    add(this.colorPanel, "Center");
+    add(this.label, "South");
+    
+    setSize(220, 220);
+    
+    Dimension localDimension1 = Toolkit.getDefaultToolkit().getScreenSize();
+    Dimension localDimension2 = getSize();
+    if (localDimension2.height > localDimension1.height) {
+      localDimension2.height = localDimension1.height;
+    }
+    if (localDimension2.width > localDimension1.width) {
+      localDimension2.width = localDimension1.width;
+    }
+    setLocation((localDimension1.width - localDimension2.width) / 2, (localDimension1.height - localDimension2.height) / 2);
+    
+    setVisible(true);
+    
+    addWindowListener(new WindowAdapter()
+    {
+      public void windowClosing(WindowEvent paramAnonymousWindowEvent)
+      {
+        System.exit(0);
+      }
+    });
+  }
+  
+  public void adjustmentValueChanged(AdjustmentEvent paramAdjustmentEvent)
+  {
+    Scrollbar localScrollbar = (Scrollbar)paramAdjustmentEvent.getAdjustable();
+    if (localScrollbar == this.scrollbar[0])
+    {
+      this.red = localScrollbar.getValue();
+      this.Rpanel.setBackground(new Color(255-this.red, 0, 0));
+    }
+    else if (localScrollbar == this.scrollbar[1])
+    {
+      this.green = localScrollbar.getValue();
+      this.Gpanel.setBackground(new Color(0, 255-this.green, 0));
+    }
+    else if (localScrollbar == this.scrollbar[2])
+    {
+      this.blue = localScrollbar.getValue();
+      this.Bpanel.setBackground(new Color(0, 0, 255-this.blue));
+    }
+    this.label.setText("Red: " + this.red + ", Green: " + this.green + ", Blue: " + this.blue);
+    
+    int i = paramAdjustmentEvent.getAdjustmentType();
+    switch (i)
+    {
+    case 3: 
+      System.out.println("BLOCK_DECREMENT");
+      break;
+    case 4: 
+      System.out.println("BLOCK_INCREMENT");
+      break;
+    case 2: 
+      System.out.println("UNIT_DECREMENT");
+      break;
+    case 1: 
+      System.out.println("UNIT_INCREMENT");
+      break;
+    case 5: 
+      System.out.println("TRACK");
+      break;
+    }
+    if (paramAdjustmentEvent.getValueIsAdjusting()) {
+      System.out.println("卷軸方塊仍被拖曳中");
+    }
+  }
+}
