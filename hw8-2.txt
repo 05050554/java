@@ -1,0 +1,129 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class TextFieldEventDemo2
+  extends Frame
+  implements ActionListener, KeyListener, MouseListener, MouseMotionListener, TextListener
+{
+  TextField textfield;
+  
+  public static void main(String[] paramArrayOfString)
+  {
+    new TextFieldEventDemo2();
+  }
+  
+  public TextFieldEventDemo2()
+  {
+    super("TextField Event Demo");
+    
+    setLayout(new FlowLayout());
+    
+    textfield = new TextField();
+    
+    textfield.setText("TextField 1");
+    
+    textfield.setColumns(10);
+    
+    textfield.setBackground(Color.PINK);
+    
+    textfield.setForeground(Color.CYAN);
+    
+    textfield.selectAll();
+    
+    textfield.addActionListener(this);
+    
+    textfield.addKeyListener(this);
+    
+    textfield.addMouseListener(this);
+    
+    textfield.addMouseMotionListener(this);
+    
+    textfield.addTextListener(this);
+    
+    add(textfield);
+    
+    setSize(200, 100);
+    
+    Dimension localDimension1 = Toolkit.getDefaultToolkit().getScreenSize();
+    Dimension localDimension2 = getSize();
+    if (localDimension2.height > localDimension1.height) {
+      localDimension2.height = localDimension1.height;
+    }
+    if (localDimension2.width > localDimension1.width) {
+      localDimension2.width = localDimension1.width;
+    }
+    setLocation((localDimension1.width - localDimension2.width) / 2, (localDimension1.height - localDimension2.height) / 2);
+    
+    setVisible(true);
+    
+    addWindowListener(new WindowAdapter()
+    {
+      public void windowClosing(WindowEvent paramAnonymousWindowEvent)
+      {
+        System.exit(0);
+      }
+    });
+  }
+  
+  public void actionPerformed(ActionEvent paramActionEvent)
+  {
+    if (paramActionEvent.getSource().equals(this.textfield)) {
+      System.out.println("於文字欄位上按下ENTER鍵");
+    }
+  }
+  
+  public void keyPressed(KeyEvent paramKeyEvent)
+  {
+    System.out.println("Key Pressed: " + paramKeyEvent.getKeyCode());
+  }
+  
+  public void keyReleased(KeyEvent paramKeyEvent)
+  {
+    System.out.println("Char: " + paramKeyEvent.getKeyChar());
+  }
+  
+  public void keyTyped(KeyEvent paramKeyEvent) {}
+  
+  public void mouseClicked(MouseEvent paramMouseEvent)
+  {
+    System.out.println("按下並釋放滑鼠按鍵: " + paramMouseEvent.getButton() + "  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+  
+  public void mouseEntered(MouseEvent paramMouseEvent)
+  {
+    System.out.println("滑鼠移置物件上方  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+  
+  public void mouseExited(MouseEvent paramMouseEvent)
+  {
+  System.out.println("滑鼠離開物件 +X"+ paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+    
+  
+public void mousePressed(MouseEvent paramMouseEvent)
+  {
+    System.out.println("按下滑鼠按鍵: " + paramMouseEvent.getButton() + "  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+  
+  public void mouseReleased(MouseEvent paramMouseEvent)
+  {
+    System.out.println("釋放滑鼠按鍵  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+  
+  public void mouseDragged(MouseEvent paramMouseEvent)
+  {
+    System.out.println("按下滑鼠按鍵並拖曳滑鼠  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY());
+  }
+  
+  public void mouseMoved(MouseEvent paramMouseEvent)
+  {
+    System.out.println("在物件上移動滑鼠  X: " + paramMouseEvent.getX() + ", Y: " + paramMouseEvent.getY() + ", ID: " + paramMouseEvent.getID());
+  }
+  
+  public void textValueChanged(TextEvent paramTextEvent)
+  {
+    if (paramTextEvent.getID() == 900) {
+      System.out.println("文字欄位內容改變");
+    }
+  }
+}
