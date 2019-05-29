@@ -1,67 +1,73 @@
 import java.awt.*;
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.UIManager;
-import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
+import javax.swing.plaf.metal.MetalLookAndFeel;
 
-public class LookandFeelDemo extends javax.swing.JFrame {
+public class HelloWorldJFrame extends javax.swing.JFrame {
 
   // Main method
   public static void main(String[] args) {
-
     try {
-      // ³]©wWindows XP Look and Feel
-      UIManager.setLookAndFeel(new com.sun.java.swing.plaf.windows.WindowsLookAndFeel());
+      UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
     }
-    catch(UnsupportedLookAndFeelException e) {
+    catch(Exception e) {
       e.printStackTrace();
     }
 
-    new LookandFeelDemo();
+    new HelloWorldJFrame();
   }
 
-  // «Øºc¨ç¦¡
-  // ´ú¸Õ¥Î
-  public LookandFeelDemo() {
-    super("Look and Feel Demo");
+  // å»ºæ§‹å‡½å¼
+  public HelloWorldJFrame() {
+    super("Hello World JFrame");
 
-    // ª½±µ©w¸qJFrame¤§Layout Manager¬°FlowLayout
-    this.setLayout(new FlowLayout());
+    //this.setUndecorated(true);
+    //this.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
 
-    JButton jbutton1 = new JButton("OK");
-    JButton jbutton2 = new JButton("Cancel");
-    JButton jbutton3 = new JButton("Yes");
-    JButton jbutton4 = new JButton("No");
+    DisplayPanel displayPanel = new DisplayPanel();
 
-    // ª½±µ±Nª«¥ó¥[¦ÜJFrame¤¤
-    this.add(jbutton1);
-    this.add(jbutton2);
-    this.add(jbutton3);
-    this.add(jbutton4);
+    // JDK 1.4çš„ç”¨æ³•
+    // å–å¾—å…¶Content Pane 
+    //Container contentPane = getContentPane();
+    // å®šç¾© Layout Manager ç‚º BorderLayout
+    //contentPane.setLayout(new BorderLayout());
+    // å°‡ç‰©ä»¶åŠ è‡³Content Paneä¸­
+    //contentPane.add(displayPanel, BorderLayout.CENTER);
 
-    // ³]©wµøµ¡ªº¤j¤p
-    this.setSize(250, 150);
+    // JDK 5.0ä¹‹å¾Œçš„ç”¨æ³•
+    // ç›´æŽ¥å®šç¾©JFrameä¹‹Layout BorderLayout
+    this.setLayout(new BorderLayout());
+    this.add(displayPanel, BorderLayout.CENTER);
+
+    this.validate();
+    this.setSize(new Dimension(200, 200));
 
     // Center the frame
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
     Dimension frameSize = this.getSize();
-
     if (frameSize.height > screenSize.height)
       frameSize.height = screenSize.height;
-
     if (frameSize.width > screenSize.width)
       frameSize.width = screenSize.width;
-
     this.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
 
-    // Åã¥Üµøµ¡
     this.setVisible(true);
-    
+
     this.addWindowListener(new WindowAdapter() {
       public void windowClosing(WindowEvent e) {
         System.exit(0);
       }
     });
+  }
+}
+
+class DisplayPanel extends javax.swing.JPanel {
+  public DisplayPanel() {
+  }
+
+  public void paintComponent(Graphics g){
+    super.paintComponent(g);
+    g.drawString("Hello MCU", 50, 50);
   }
 }
